@@ -1,0 +1,86 @@
+/* DayPicker Calendar Enhanced Styling - Theme Aware */
+:root {
+  --rdp-cell-size: 50px;
+  --rdp-accent-color: #667eea;
+  --rdp-background-color: #f5f7fa;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --rdp-accent-color: #667eea;
+    --rdp-background-color: #0f3460;
+  }
+}
+
+.rdp {
+  --rdp-cell-size: 50px;
+  --rdp-accent-color: #667eea;
+  --rdp-background-color: #f5f7fa;
+  margin: 0 auto;
+}
+
+.rdp-months {
+  margin: 10px 0;
+}
+
+.rdp-month {
+  width: 100%;
+}
+
+.rdp-caption {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  font-weight: 700;
+  font-size: 16px;
+  color: inherit;
+}
+
+.rdp-head_cell {
+  font-weight: 600;
+  color: #667eea;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.rdp-cell {
+  padding: 2px;
+}
+
+.rdp-day {
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  color: inherit;
+}
+
+.rdp-day:hover:not(.rdp-day_disabled) {
+  background-color: #e3f2fd;
+  transform: scale(1.05);
+}
+
+.rdp-day_selected:not([disabled]) {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.rdp-day_today {
+  font-weight: 700;
+  color: #f93b1d;
+}
+
+.rdp-day_disabled {
+  color: #bdc3c7;
+  background-color: transparent;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.rdp-button {
+  border-radius: 8px;
+}

@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Responsive Layout Utilities */
+@media (max-width: 1024px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  html, body, #root {
+    width: 100%;
+  }
+  
+  body {
+    font-size: 13px;
+  }
+
+  /* LogsPage responsive layout */
+  [data-logs-container] {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: auto 1fr !important;
+  }
+
+  [data-logs-left-panel] {
+    border-right: none !important;
+    border-bottom: 1px solid #ddd !important;
+    max-height: auto !important;
+    max-width: 100% !important;
+  }
+
+  [data-logs-right-panel] {
+    max-height: auto !important;
+  }
+}
+
+@media (max-width: 480px) {
+  html, body, #root {
+    width: 100%;
+    overflow-x: hidden;
+  }
+  
+  body {
+    font-size: 12px;
+  }
+
+  /* Stack layout on very small screens */
+  [data-logs-container] {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: auto auto !important;
+  }
+
+  [data-logs-left-panel],
+  [data-logs-right-panel] {
+    max-height: fit-content !important;
+    padding: 12px !important;
+  }
+}
