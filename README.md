@@ -1,139 +1,139 @@
-Team Name And Roll No
+## Team Members
+| Name            | Roll Number |
+| --------------- | ----------- |
+| Kashish Goyal   | 2210990496  |
+| Aastha          | 2210991128  |
+| Chaitanya Verma | 22109901453 |
 
-1. Kashish Goyal 2210990496
 
-2. Aastha 2210991128
+## Project Title
+LearningLog - Smart Learning and Communication System
 
-3. Chaitanya Verma 22109901453
+## Type
+Code Copyright
 
+## Team Details
+We are a team of final-year Computer Science students working collaboratively on a full-stack application. The project involves backend development, frontend design, database management, and implementation of real-time and AI-based features.
 
-# LearningLog-Smart-Learning-And-Communication-System
+## Current Status
+The project is fully functional with all major features implemented, including authentication, role-based access, learning logs, analytics dashboard, chatbot integration, and real-time communication. The system has been tested and is ready for further deployment.
+
+## Project Description
 A full-stack platform that combines daily logs, role-based access, and tracking. It includes chatbot support, real-time updates, and shared logs, improving learning, transparency, and accountability.
 
--Features
+## Features
+- Secure authentication using JWT  
+- Role-based access (Admin / User)  
+- Daily learning log (Add, Edit, View)  
+- Analytics dashboard for progress tracking  
+- Calendar view for logs  
+- Reminder system (6 PM notification)  
+- Real-time chat using WebSocket  
+- AI Chatbot for quick help  
+- View logs shared by other users  
+- Admin dashboard (monitor users, activity, stats)  
+- Edit history tracking for logs  
 
-*  Secure authentication using JWT
-*  Role-based access (Admin / User)
-*  Daily learning log (Add, Edit, View)
-*  Analytics dashboard for progress tracking
-*  Calendar view for logs
-*  Reminder system (6 PM notification)
-*  Real-time chat using WebSocket
-*  AI Chatbot for quick help
-*  View logs shared by other users
-*  Admin dashboard (monitor users, activity, stats)
-*  Edit history tracking for logs
+## Tech Stack
 
--Tech Stack
+### Backend
+- Java  
+- Spring Boot  
+- Spring Security (JWT)  
+- WebSocket  
+- Spring AI  
 
-Backend:
+### Frontend
+- React.js  
+- Axios  
+- Context API  
 
-* Java
-* Spring Boot
-* Spring Security (JWT)
-* WebSocket
-* Spring AI
+### Database
+- MySQL  
 
-Frontend:
+---
 
-* React.js
-* Axios
-* Context API
+## Project Setup
 
-Database:
-
-* MySQL
-
-
--Project Setup
-
-1. Clone the Repository
-
-```
+### 1. Clone the Repository
+```bash
 git clone https://github.com/Kashishgoyal6300/LearningLog.git
 cd LearningLog
 ```
 
-2. Backend Setup (Spring Boot)
+### 2. Backend Setup (Spring Boot)
 
-	1. Open backend folder in your IDE (IntelliJ / VS Code)
+1. Open backend folder in your IDE (IntelliJ / VS Code)
 
-	2. Configure database in `application.properties`:
+2. Configure database in `application.properties`:
 
-	        ```properties
-		spring.datasource.url=jdbc:mysql://localhost:3306/learning_log
-		spring.datasource.username=YOUR_USERNAME
-		spring.datasource.password=YOUR_PASSWORD
-		spring.jpa.hibernate.ddl-auto=update
-		```
+```properties
+spring.datasource.url=jdbc:mysql://localhost:3306/learning_log
+spring.datasource.username=YOUR_USERNAME
+spring.datasource.password=YOUR_PASSWORD
+spring.jpa.hibernate.ddl-auto=update
+```
 
-	3. Run the Spring Boot application:
+3. Run the Spring Boot application:
 
-		```
-		mvn spring-boot:run
-		```
+```bash
+mvn spring-boot:run
+```
 
-		Backend will run on:
+Backend will run on:
+```
+http://localhost:8080
+```
 
-		```
-		http://localhost:8080
-		```
+---
 
+### 3. Frontend Setup (React)
 
-3. Frontend Setup (React)
+1. Go to frontend folder:
+```bash
+cd learning-log-frontend-main
+```
 
-		1. Go to frontend folder:
+2. Install dependencies:
+```bash
+npm install
+```
 
-			```
-			cd learning-log-frontend-main
-			```
+3. Start the frontend:
+```bash
+npm run dev
+```
 
-		2. Install dependencies:
+Frontend will run on:
+```
+http://localhost:5173
+```
 
-			```
-			npm install
-			```
+---
 
-		3. Start the frontend:
+## Authentication Flow
+- User logs in → JWT token generated  
+- Token stored in frontend (via Axios interceptors)  
+- All API requests are secured using JWT  
 
-			```
-			npm run dev
-			```
+## Chat System
+- Built using WebSocket  
+- Enables real-time communication between users and admin  
+- Supports message updates without refreshing  
 
-			Frontend will run on:
+## Chatbot (Spring AI)
+- Integrated AI chatbot for answering queries  
+- Helps users without needing admin support  
+- Provides quick and professional responses  
 
-			```
-			http://localhost:5173
-			```
+## Reminder System
+- Sends notification at 6 PM  
+- Triggered if user has not submitted daily log  
+- Helps maintain consistency  
 
--Authentication Flow
-
-* User logs in → JWT token generated
-* Token stored in frontend (via Axios interceptors)
-* All API requests are secured using JWT
-
--Chat System
-
-* Built using WebSocket
-* Enables real-time communication between users and admin
-* Supports message updates without refreshing
-
--Chatbot (Spring AI)
-
-* Integrated AI chatbot for answering queries
-* Helps users without needing admin support
-* Provides quick and professional responses
-
--Reminder System
-
-* Sends notification at 6 PM
-* Triggered if user has not submitted daily log
-* Helps maintain consistency
-
--Admin Capabilities
-
-* View total users
-* Track daily activity
-* Identify users who missed logs
-* Manage roles (Admin/User)
-* Monitor engagement
+## Admin Capabilities
+- View total users  
+- Track daily activity  
+- Identify users who missed logs  
+- Manage roles (Admin/User)  
+- Monitor engagement  
